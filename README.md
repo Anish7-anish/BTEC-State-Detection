@@ -1,36 +1,53 @@
 # Time Series Anomaly Detection and State Management for NCSU BTEC
 
 ## Overview
-This repository is dedicated to a Python-based analytical system developed for the water treatment facility at the North Carolina State University's Biomanufacturing Training and Education Center (BTEC). The system monitors time series data to detect anomalies and manage system states, ensuring optimal operational performance.
-
-The core of the system is an LSTM (Long Short-Term Memory) neural network, which is employed to identify unusual operational patterns in real-time or historical data, signaling potential anomalies that may warrant further attention or immediate action.
+This repository houses a sophisticated Python-based analytical tool designed for the water treatment facility at North Carolina State University's Biomanufacturing Training and Education Center (BTEC). Using an LSTM (Long Short-Term Memory) neural network, the system monitors, detects anomalies, and manages states in time series data to ensure optimal operational performance and reliability.
 
 ## Features
-- **Data Fetching**: Authenticate and retrieve time series data from a GraphQL endpoint securely.
-- **Data Preprocessing**: Process and normalize data to prepare for LSTM model input.
-- **Anomaly Detection**: Utilize an LSTM autoencoder to detect significant operational deviations, marking them as anomalies.
-- **State Management**: Dynamically adjust operational states between "normal" and "high usage" based on anomaly detection and analysis.
-- **Visualization**: Graphically represent time series data, anomalies, and state transitions for intuitive analysis and decision-making support.
+
+### Secure Token Retrieval for GraphQL Authentication
+Ensures secure access to operational data by handling authentication and token retrieval through a GraphQL endpoint, providing robust security measures for data interactions.
+
+### Enhanced GraphQL Request Handling
+Efficiently manages GraphQL requests, including handling token expiration and re-authentication, to maintain seamless data fetching operations.
+
+### Data Preprocessing
+Processes and normalizes incoming data to ensure compatibility with the LSTM model, preparing it for effective anomaly detection and analysis.
+
+### Anomaly Detection with LSTM
+Employs an LSTM model to analyze time series data and identify unusual patterns or anomalies, signaling potential operational issues that require attention.
+
+### Dynamic Thresholding for Anomaly Detection
+Implements dynamic thresholding techniques to accurately identify deviations based on historical data trends, enhancing the system’s sensitivity to operational anomalies.
+
+### State Management
+Automatically adjusts the operational states between "normal" and "high usage" based on detected anomalies, facilitating proactive management of system resources.
+
+### Visualization of Data and Anomalies
+Provides graphical representations of time series data, detected anomalies, and state changes, making the data intuitive and actionable for users.
+
+### Automatic Email Notifications
+Configured to send automated email alerts upon detection of significant anomalies or state changes, ensuring timely communication and response.
+
+### Scheduled Monitoring
+Supports the scheduling of monitoring tasks, allowing the system to perform regular checks and updates autonomously, enhancing the system’s reliability and performance.
 
 ## Usage
 To employ this system:
-1. Authenticate with the specified endpoint to fetch the required dataset.
-2. Conduct necessary data preprocessing for LSTM model compatibility.
-3. Train the LSTM autoencoder using a designated portion of the data.
-4. Implement the model on new or ongoing data streams for anomaly detection.
-5. Apply state management protocols to react to identified anomalies.
-6. Visualize the results using matplotlib for clear and actionable insights.
-
-Detailed setup, configuration, and operational instructions are available in the included documentation files.
+1. Authenticate and retrieve data from the specified GraphQL endpoint.
+2. Conduct necessary data preprocessing to ensure LSTM model compatibility.
+3. Train the LSTM autoencoder with an appropriate subset of the data.
+4. Deploy the model on new or ongoing data streams to detect anomalies.
+5. Implement state management protocols based on detected anomalies.
+6. Visualize results using matplotlib for clear, actionable insights.
 
 ## Technology Stack
-- **Python**: The primary programming language used.
-- **TensorFlow/Keras**: For building and training the LSTM model.
-- **Pandas**: To handle data manipulation tasks.
-- **Matplotlib**: For visualizing the data.
-- **Requests**: To fetch data from the GraphQL API.
-
+- **Python**: Main programming language.
+- **TensorFlow/Keras**: Frameworks for modeling and training the LSTM.
+- **Pandas**: For efficient data manipulation.
+- **Matplotlib**: For data visualization.
+- **Requests**: For data fetching from the GraphQL API.
 
 ## Acknowledgments
-- North Carolina State University BTEC Department
-- Project contributors and maintainers
+- NCSU BTEC Department
+- All project contributors and maintainers
