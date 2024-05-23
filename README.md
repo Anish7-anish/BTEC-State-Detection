@@ -32,6 +32,10 @@ Configured to send automated email alerts upon detection of significant anomalie
 ### Scheduled Monitoring
 Supports the scheduling of monitoring tasks, allowing the system to perform regular checks and updates autonomously, enhancing the system’s reliability and performance.
 
+### Running the Project
+You can run this project directly in a browser using the following Google Colab link:
+[Run in Colab](https://colab.research.google.com/github/Anish7-anish/BTEC-State-Detection/blob/main/HPW_LSTM.ipynb)
+
 ## Usage
 To employ this system:
 1. Authenticate and retrieve data from the specified GraphQL endpoint.
